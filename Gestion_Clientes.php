@@ -1,13 +1,13 @@
 <?php
 //Interfaz que permite pintar la data por medio de codigo PHP
 
-require_once 'alumno.entidad.php';
+require_once 'usuario.entidad.php';
 //Verifica que el archivo ya este incluido, y si es asi no se incluye de nuevo
-require_once 'alumno.model.php';
+require_once 'usuario.model.php';
 
 // Logica
-$alm = new Alumno();
-$model = new AlumnoModel();
+$alm = new usuario();
+$model = new UsuarioModel();
 
 if(isset($_REQUEST['action']))
 {
@@ -57,7 +57,7 @@ if(isset($_REQUEST['action']))
         <head  profile="http://www.w3.org/2005/10/profile">
             <link rel="icon" type="image/png" href="../9.png">
             <link rel="stylesheet" type="text/css" href="../Style.css"> 
-            <a href="Administrador.html"><IMG SRC="../2.png" height = 70 width= 170 Hspace = 10 Vspace = 1 > </a>
+            <a href="Administrador.php"><IMG SRC="../2.png" height = 70 width= 170 Hspace = 10 Vspace = 1 > </a>
             <marquee  width = 65% height = "60" behavior=slide aling=top scrollamount = 10 bgcolor = red> 
                 <font face = "Verdana", size = 20 , color = white>  Droger&iacutea PPs </font>
             </marquee>
@@ -85,7 +85,7 @@ if(isset($_REQUEST['action']))
     </form>
         <div id = "header">
             <ul class = "nav">
-                <li><a href="Administrador.html">Inicio </a></li>
+                <li><a href="Administrador.php">Inicio </a></li>
                 <li><a href="">Medicamentos </a>
                         <ul>
                             <li><a href="Mucoliticos.html">Mucol&iacuteticos </a></li>

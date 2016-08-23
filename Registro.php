@@ -1,13 +1,13 @@
 <?php
 //Interfaz que permite pintar la data por medio de codigo PHP
 
-require_once 'alumno.entidad.php';
+require_once 'usuario.entidad.php';
 //Verifica que el archivo ya este incluido, y si es asi no se incluye de nuevo
-require_once 'alumno.model.php';
+require_once 'usuario.model.php';
 
 // Logica
-$alm = new Alumno();
-$model = new AlumnoModel();
+$alm = new usuario();
+$model = new UsuarioModel();
 
 if(isset($_REQUEST['action']))
 {

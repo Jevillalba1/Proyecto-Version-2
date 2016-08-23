@@ -1,5 +1,5 @@
 <?php
-class Alumno
+class Enfermedades
   {
     private $Id_Enfermedad;
     private $Nombre;

@@ -2,8 +2,8 @@
 require_once 'enfermedad.entidad.php';
 require_once 'enfermedad.model.php';
 
-$alm = new Alumno();
-$model = new AlumnoModel();
+$alm = new Enfermedades();
+$model = new EnfermedadesModel();
 
 if(isset($_REQUEST['action']))
 {
@@ -40,12 +40,12 @@ if(isset($_REQUEST['action']))
     }
 }
 ?>
- 
+ <!DOCTYPE html>
  <title>Enfermedades</title>
         <head  profile="http://www.w3.org/2005/10/profile">
             <link rel="icon" type="image/png" href="../9.png">
             <link rel="stylesheet" type="text/css" href="../Style.css"> 
-            <a href="Index.html"><IMG SRC="../2.png" height = 70 width= 170 Hspace = 10 Vspace = 1 > </a>
+            <a href="administrador.php"><IMG SRC="../2.png" height = 70 width= 170 Hspace = 10 Vspace = 1 > </a>
             <marquee  width = 65% height = "60" behavior=slide aling=top scrollamount = 10 bgcolor = red> 
                 <font face = "Verdana", size = 20 , color = white>  Droger&iacutea PPs </font>
             </marquee>
@@ -73,7 +73,7 @@ if(isset($_REQUEST['action']))
     </form>
        <div id = "header">
             <ul class = "nav">
-                <li><a href="Administrador.html">Inicio </a></li>
+                <li><a href="Administrador.php">Inicio </a></li>
                 <li><a href="">Gestionar </a>
                         <ul>
                             <li><a href="Enfermedades.php">Enfermedades </a></li>

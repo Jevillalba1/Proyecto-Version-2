@@ -1,5 +1,5 @@
 <?php
-class AlumnoModel
+class EnfermedadesModel
 {
     private $pdo;
     public function __CONSTRUCT()
@@ -24,7 +24,7 @@ class AlumnoModel
 
             foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
             {
-                $alm = new Alumno();
+                $alm = new Enfermedades();
                 $alm->__SET('Id_Enfermedad', $r->Id_Enfermedad);
                 $alm->__SET('Nombre', $r->Nombre);
                 $alm->__SET('Gravedad', $r->Gravedad);
@@ -49,7 +49,7 @@ class AlumnoModel
             $stm->execute(array($Id_Enfermedad));
             $r = $stm->fetch(PDO::FETCH_OBJ);
 
-            $alm = new Alumno();
+            $alm = new Enfermedades();
 //Se almacenan los resultados de la consulta en variables
                 $alm->__SET('Id_Enfermedad', $r->Id_Enfermedad);
                 $alm->__SET('Nombre', $r->Nombre);
@@ -76,7 +76,7 @@ class AlumnoModel
         }
     }
 //Se crea la funcion de tipo publica llamada "Actualizar"
-    public function Actualizar(Alumno $data)
+    public function Actualizar(Enfermedades $data)
     {
         try 
         {
@@ -101,7 +101,7 @@ class AlumnoModel
         }
     }
 
-    public function Registrar(Alumno $data)
+    public function Registrar(Enfermedades $data)
     {
         try 
         {
